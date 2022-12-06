@@ -443,6 +443,9 @@ main {
   #welcomeContent h2 {
     font-size: 1.4rem;
   }
+  .navContent {
+    margin: 0px 20px;
+  }
   #sGrid {
     gap: 20px;
   }
