@@ -1,0 +1,630 @@
+@use './var';
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+:root {
+    font-size: 10px;
+    --gradient: linear-gradient(180deg, #F87171 0%, #D9A689 100%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    @include flexCenter();
+
+    width: 100%;
+    height: 64px;
+    background-color: var.$bgPink;
+}
+
+// Components
+.actionBtn {
+    border-radius: 200px;
+    background-image: var(--gradient);
+    font-weight: 700;
+    color: var.$txt900;
+    transition: filter 0.5s;
+
+    &:hover {
+        filter: brightness(116%);
+    }
+}
+
+.secondBtn {
+    border-radius: 200px;
+    background-color: black;
+    font-weight: 600;
+    color: white;
+    width: fit-content;
+    display: block;
+    transition: background-color 0.5s;
+
+    &:hover {
+        background-color: var.$txt900
+    }
+}
+
+.mainTxt {
+    color: var.$txt900;
+    font-weight: 700;
+}
+
+.coloredMainTxt {
+    font-weight: 700;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.secondTxt {
+    color: var.$txt900;
+    font-weight: 600;
+}
+
+
+.thirdTxt {
+    color: var.$txt300;
+    font-weight: 400;
+}
+
+.fourthTxt {
+    color: var.$txt200;
+    font-weight: 400;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.borders-pd {
+    padding: 40px 50px 80px;
+    max-width: 2560px;
+    width: -moz-available;
+    /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;
+    /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+}
+
+//NAV
+.navContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1680px;
+    margin: 0px 50px;
+    width: 100%;
+
+}
+
+#navPages {
+    display: flex;
+    gap: 38px;
+
+    li {
+        display: inline-block;
+
+        a {
+
+            color: var.$txt900;
+            font-size: 12px;
+        }
+
+        #navAction {
+            padding: 7px 12px;
+        }
+    }
+}
+
+#btnExpMenu {
+    display: none;
+}
+
+#expMenu {
+    display: none;
+    width: 100%;
+    height: 0px;
+
+    position: absolute;
+    top: 64px;
+    transition: all 0.7s;
+    overflow: hidden;
+
+    background-color: var.$bgPink;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.0);
+
+    #expMcontent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        padding: 32px 0px;
+
+        a {
+            font-size: 14px;
+            color: var.$txt900;
+        }
+
+        #expAction {
+            font-size: 16px;
+            width: 65vw;
+            max-width: 500px;
+            padding: 16px 42px;
+            @include flexCenter()
+        }
+    }
+}
+
+//Main 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var.$w200
+}
+
+//ALLSERVICES
+#allservices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicesTxt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 4.8rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+//Services Content 
+#servicesContent {
+    margin-top: 64px;
+    display: grid;
+    gap: 36px;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(3, 350px);
+}
+
+// CARD
+.svc-Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #ffff;
+    border-radius: 6.8%;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.8s;
+    cursor: pointer;
+
+    &:hover {
+        transform: translate(0px, -10px);
+
+    }
+
+    &>* {
+        justify-self: center;
+    }
+
+    .svc-img {
+        margin-top: 24px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .svc-card-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 12px;
+        gap: 8px;
+
+        h1 {
+            font-size: 2.0rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            text-align: center;
+            max-width: 310px;
+        }
+
+
+    }
+}
+
+//BANNER
+#bannerAgendar {
+
+    width: 1022px;
+    padding: 50px;
+    border-radius: 24px;
+    background-color: black;
+    margin-bottom: 64px;
+
+    #ba-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #bTextC {
+            h2 {
+                color: white;
+                font-size: 2.8rem;
+                font-weight: 600;
+            }
+
+            h1 {
+                color: var.$pink;
+                font-weight: 700;
+                font-size: 3.2rem;
+            }
+        }
+
+        a {
+            @include flexCenter();
+            border-radius: 200px;
+            background-color: white;
+            font-weight: 600;
+            color: black;
+            width: fit-content;
+            height: fit-content;
+            padding: 21px 34px;
+            display: block;
+            transition: background-color 0.5s;
+
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+}
+
+//FOOTER 
+
+#pgFooter {
+    font-size: 1.4rem;
+
+}
+
+#fContent {
+    padding-top: 46px;
+    border-top: solid 1px #D2D2D7;
+    ;
+    display: flex;
+    justify-content: space-between;
+}
+
+#carvalhoClinica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: black;
+    }
+}
+
+#fLinks {
+    display: flex;
+    gap: 4.5vw;
+}
+
+.footerLinks {
+
+    h1 {
+        color: var.$txt900;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    li {
+        list-style: none;
+        margin: 5px 0px;
+
+        a {
+            color: var.$txt300;
+        }
+    }
+
+}
+
+#byLuan {
+    width: 165px;
+    height: 45px;
+    background-size: cover;
+    background-image: url(../visual/svg/developed\ By\ Anluk.svg);
+}
+
+//Breakpoint
+@media (max-width: 1320px) {
+
+    //Services Content 
+    #servicesContent {
+        gap: 28px;
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(3, 300px);
+    }
+
+    .svc-Card {
+        .svc-img {
+            margin-top: 24px;
+            width: 125px;
+            height: 125px;
+        }
+
+        .svc-card-info {
+            h1 {
+                font-size: 1.8rem;
+                max-width: 280px;
+                text-align: center
+            }
+
+            p {
+                font-size: 1.4rem;
+                text-align: center;
+                max-width: 280px;
+            }
+        }
+    }
+
+    //BANNER
+    #bannerAgendar {
+        width: 856px;
+        padding: 50px;
+
+        #ba-content {
+            #bTextC {
+                h2 {
+                    font-size: 1.8rem;
+                }
+
+                h1 {
+                    font-size: 2.4rem;
+                }
+            }
+
+            a {
+                h1 {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1074px) {
+
+    #servicesContent {
+        gap: 28px;
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: repeat(5, 350px);
+    }
+
+    .svc-Card {
+        .svc-img {
+            margin-top: 24px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .svc-card-info {
+            h1 {
+                font-size: 2.4rem;
+                max-width: 310px;
+
+            }
+
+            p {
+                font-size: 1.6rem;
+                max-width: 280px;
+            }
+        }
+    }
+
+    #bannerAgendar {
+        @include flexCenter();
+        width: 100%;
+        min-height: 250px;
+        padding: 0px;
+        border-radius: 0px;
+
+        #ba-content {
+            padding: 50px;
+            width: 100%;
+        }
+    }
+
+
+    //Footer 
+    #fContent {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 32px;
+    }
+
+    #fLinks {
+        display: flex;
+        gap: 15.5vw;
+    }
+}
+
+@media (max-width: 845px) {
+
+    //ALLSERVICES 
+    .servicesTxt {
+        h1 {
+            font-size: 3.6rem;
+            text-align: center;
+        }
+    }
+
+    //Services Content 
+    #servicesContent {
+        width: 100%;
+        gap: 28px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .svc-Card {
+        border-radius: 24px;
+        display: grid;
+        justify-content: start;
+        grid-template-columns: 1fr 60%;
+        gap: 5%;
+        min-height: 150px;
+
+        .svc-img {
+            margin-top: 0px;
+            width: 90px;
+            height: 90px;
+            margin-left: 20px;
+
+        }
+
+        .svc-card-info {
+            justify-self: start;
+            align-items: start;
+            flex-direction: column;
+            margin-right: 20px;
+
+            h1 {
+                text-align: start;
+                width: 100%;
+            }
+
+            p {
+                text-align: start;
+                width: 100%;
+            }
+        }
+
+        &:hover {
+            transform: none;
+        }
+    }
+
+    //BANNER
+    #bannerAgendar {
+
+        #ba-content {
+            flex-direction: column;
+            gap: 24px;
+
+            #bTextC {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+
+                h2 {
+                    font-size: 1.4rem;
+                }
+
+                h1 {
+                    font-size: 2.0rem;
+                }
+            }
+        }
+    }
+
+    //flex-direction: column;
+}
+
+@media (max-width: 760px) {
+
+    //Components 
+    .borders-pd {
+        padding: 40px 20px 80px;
+
+    }
+
+    #navPages {
+        display: none;
+    }
+
+    #btnExpMenu {
+        display: flex;
+    }
+
+    #expMenu {
+        display: block;
+    }
+
+    //nav 
+    .navContent {
+        // margin: 0px 20px;
+    }
+
+}
+
+@media (max-width: 534px) {
+
+    //Components
+    .section-subtitle {
+        font-size: 1.6rem;
+    }
+
+    //Services Card
+    .svc-Card {
+        .svc-img {
+            width: 70px;
+            height: 70px;
+        }
+
+        .svc-card-info {
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    //BANNER
+    #bannerAgendar {
+
+        #ba-content {
+
+            a {
+                h1 {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}

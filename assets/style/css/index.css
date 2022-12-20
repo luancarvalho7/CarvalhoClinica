@@ -76,6 +76,13 @@ nav {
   font-weight: 400;
 }
 
+.section-title {
+  font-size: 4.8rem;
+  text-align: center;
+  line-height: 110%;
+  margin-bottom: 6px;
+}
+
 .section-subtitle {
   font-size: 1.8rem;
   text-align: center;
@@ -84,6 +91,11 @@ nav {
 .borders-pd {
   padding: 40px 50px 80px;
   max-width: 2560px;
+  width: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
 }
 
 .navContent {
@@ -211,11 +223,6 @@ main {
 }
 
 #sServices {
-  width: -moz-available;
-  /* WebKit-based browsers will ignore this. */
-  width: -webkit-fill-available;
-  /* Mozilla-based browsers will ignore this. */
-  width: fill-available;
   gap: 50px;
   display: flex;
   justify-content: center;
@@ -278,9 +285,6 @@ main {
   align-items: center;
   flex-direction: column;
 }
-#reviewsTitle h1 {
-  font-size: 4.8rem;
-}
 
 .elfsight-app-3d5503b7-ac55-4620-a445-0f173eadb11b {
   height: 202px;
@@ -291,20 +295,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  width: -moz-available;
-  /* WebKit-based browsers will ignore this. */
-  width: -webkit-fill-available;
-  /* Mozilla-based browsers will ignore this. */
-  width: fill-available;
 }
 
 #adressTitle {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-#adressTitle h1 {
-  font-size: 4.8rem;
 }
 
 #mapClinica {
@@ -330,12 +326,19 @@ main {
     width: 450px;
   }
 }
+#sInstagram {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+#instaTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #pgFooter {
-  width: -moz-available;
-  /* WebKit-based browsers will ignore this. */
-  width: -webkit-fill-available;
-  /* Mozilla-based browsers will ignore this. */
-  width: fill-available;
   font-size: 1.4rem;
 }
 
@@ -433,6 +436,10 @@ main {
   }
 }
 @media (max-width: 534px) {
+  .section-title {
+    font-size: 3.8rem;
+    line-height: 110%;
+  }
   .section-subtitle {
     font-size: 1.6rem;
   }
