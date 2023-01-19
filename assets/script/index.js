@@ -23,6 +23,16 @@ setTimeout(() => {
     y.style.display = "none"
 }, 5000);
 
+setTimeout(() => {
+    const x = document.querySelector("#eapps-google-reviews-3d5503b7-ac55-4620-a445-0f173eadb11b > div > a")
+    console.log(x)
+    x.style.display = "none"
+
+    const y =document.querySelector("#eapps-instagram-feed-1 > a")
+    console.log(y)
+    y.style.display = "none"
+}, 10000);
+
 
 //Test 
 
