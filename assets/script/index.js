@@ -6,7 +6,7 @@ expMenu.style.height = '0px'
 
 function navMobileMenu() {
     if (expMenu.style.height == '0px') {
-        expMenu.style.height = '280px';
+        expMenu.style.height = '333px';
         expMenu.style.borderBottom = "solid 1px rgba(0, 0, 0, 0.25)";
     }
     else { expMenu.style.height = '0px'; expMenu.style.borderBottom = "none" }
@@ -21,7 +21,7 @@ setTimeout(() => {
     const y =document.querySelector("#eapps-instagram-feed-1 > a")
     console.log(y)
     y.style.display = "none"
-}, 1000);
+}, 5000);
 
 
 //Test 

@@ -76,6 +76,13 @@ nav {
   font-weight: 400;
 }
 
+.section-title {
+  font-size: 4.8rem;
+  text-align: center;
+  line-height: 110%;
+  margin-bottom: 6px;
+}
+
 .section-subtitle {
   font-size: 1.8rem;
   text-align: center;
@@ -159,69 +166,122 @@ main {
   background-color: #FBFBFD;
 }
 
-#allservices {
+#sClinic {
+  background-color: #FFF7F0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
-.servicesTxt {
+#clinicTxt {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.servicesTxt h1 {
+#clinicTxt h1 {
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+#clinicContent {
+  margin-top: 64px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 1.66vw;
+}
+#clinicContent :nth-child(1) {
+  display: flex;
+  justify-content: end;
+}
+#clinicContent :nth-child(2) {
+  display: flex;
+}
+
+#clinicPicture {
+  width: 655px;
+  max-width: 42vw;
+  background-image: url("../visual/images/TheClinic.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.sPicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+.sPicture img {
+  user-select: none;
+  height: 550px;
+  width: auto;
+}
+
+#clinicInfo {
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#clinicInfo h1 {
   font-size: 4.8rem;
 }
-.servicesTxt h2 {
+#clinicInfo p {
   font-size: 1.8rem;
+  max-width: 25vw;
 }
 
-#servicesContent {
-  margin-top: 64px;
+#sRooms {
   display: grid;
+  justify-content: center;
+  grid-template-columns: 25vw 25vw;
+  grid-template-rows: max-content;
   gap: 36px;
-  grid-template-columns: repeat(3, 350px);
-  grid-template-rows: repeat(5, 350px);
 }
 
-.svc-Card {
+.room-Card {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100%;
   background-color: white;
-  border-radius: 6.8%;
+  border-radius: 24px;
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.8s;
   cursor: pointer;
+  overflow: hidden;
 }
-.svc-Card:hover {
+.room-Card:hover {
   transform: translate(0px, -10px);
 }
-.svc-Card > * {
+.room-Card > * {
   justify-self: center;
 }
-.svc-Card .svc-img {
-  margin-top: 24px;
-  width: 150px;
-  height: 150px;
+.room-Card img {
+  height: 380px;
+  width: 100%;
+  object-fit: cover;
 }
-.svc-Card .svc-card-info {
+.room-Card .room-CardContent {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 12px;
+  padding-bottom: 15px;
   gap: 8px;
 }
-.svc-Card .svc-card-info h1 {
+.room-Card .room-CardContent h1 {
   font-size: 2rem;
 }
-.svc-Card .svc-card-info p {
+.room-Card .room-CardContent p {
   font-size: 1.6rem;
   text-align: center;
-  max-width: 310px;
+  max-width: 90%;
 }
 
 #bannerAgendar {
@@ -236,15 +296,17 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-#bannerAgendar #ba-content #bTextC h2 {
-  color: white;
-  font-size: 2.8rem;
-  font-weight: 600;
+#bannerAgendar #ba-content #bTextC {
+  max-width: 70%;
 }
 #bannerAgendar #ba-content #bTextC h1 {
+  color: #FBFBFD;
+  font-weight: 600;
+  font-size: 2.8rem;
+}
+#bannerAgendar #ba-content #bTextC h1 span {
   color: #F57875;
   font-weight: 700;
-  font-size: 3.2rem;
 }
 #bannerAgendar #ba-content a {
   display: flex;
@@ -264,6 +326,44 @@ main {
   text-align: center;
 }
 
+@media (max-width: 1320px) {
+  #clinicInfo h1 {
+    font-size: 4.8rem;
+  }
+  #clinicInfo p {
+    font-size: 1.6rem;
+    max-width: 35vw;
+  }
+  .sPicture {
+    height: 450px;
+  }
+  #sRooms {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 35vw 35vw;
+    grid-template-rows: max-content;
+    gap: 36px;
+  }
+  .room-Card .room-CardContent h1 {
+    font-size: 1.8rem;
+  }
+  .room-Card .room-CardContent p {
+    font-size: 1.3rem;
+  }
+  #bannerAgendar {
+    width: 856px;
+    padding: 50px;
+  }
+  #bannerAgendar #ba-content #bTextC h2 {
+    font-size: 1.8rem;
+  }
+  #bannerAgendar #ba-content #bTextC h1 {
+    font-size: 2.4rem;
+  }
+  #bannerAgendar #ba-content a h1 {
+    font-size: 1.8rem;
+  }
+}
 #pgFooter {
   font-size: 1.4rem;
 }
@@ -312,60 +412,7 @@ main {
   background-image: url(../visual/svg/developed\ By\ Anluk.svg);
 }
 
-@media (max-width: 1320px) {
-  #servicesContent {
-    gap: 28px;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: repeat(5, 300px);
-  }
-  .svc-Card .svc-img {
-    margin-top: 24px;
-    width: 125px;
-    height: 125px;
-  }
-  .svc-Card .svc-card-info h1 {
-    font-size: 1.8rem;
-    max-width: 280px;
-    text-align: center;
-  }
-  .svc-Card .svc-card-info p {
-    font-size: 1.4rem;
-    text-align: center;
-    max-width: 280px;
-  }
-  #bannerAgendar {
-    width: 856px;
-    padding: 50px;
-  }
-  #bannerAgendar #ba-content #bTextC h2 {
-    font-size: 1.8rem;
-  }
-  #bannerAgendar #ba-content #bTextC h1 {
-    font-size: 2.4rem;
-  }
-  #bannerAgendar #ba-content a h1 {
-    font-size: 1.8rem;
-  }
-}
-@media (max-width: 1074px) {
-  #servicesContent {
-    gap: 28px;
-    grid-template-columns: repeat(2, 350px);
-    grid-template-rows: repeat(5, 350px);
-  }
-  .svc-Card .svc-img {
-    margin-top: 24px;
-    width: 150px;
-    height: 150px;
-  }
-  .svc-Card .svc-card-info h1 {
-    font-size: 2.4rem;
-    max-width: 310px;
-  }
-  .svc-Card .svc-card-info p {
-    font-size: 1.6rem;
-    max-width: 280px;
-  }
+@media (max-width: 1060px) {
   #bannerAgendar {
     display: flex;
     justify-content: center;
@@ -389,47 +436,62 @@ main {
     gap: 15.5vw;
   }
 }
-@media (max-width: 845px) {
-  .servicesTxt h1 {
-    font-size: 3.6rem;
-    text-align: center;
+@media (max-width: 760px) {
+  .borders-pd {
+    padding: 40px 20px 80px;
   }
-  #servicesContent {
-    width: 100%;
-    gap: 28px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+  #navPages {
+    display: none;
   }
-  .svc-Card {
-    border-radius: 24px;
-    display: grid;
-    justify-content: start;
-    grid-template-columns: 1fr 60%;
-    gap: 5%;
-    min-height: 150px;
+  #btnExpMenu {
+    display: flex;
   }
-  .svc-Card .svc-img {
-    margin-top: 0px;
-    width: 90px;
-    height: 90px;
-    margin-left: 20px;
+  #expMenu {
+    display: block;
   }
-  .svc-Card .svc-card-info {
-    justify-self: start;
-    align-items: start;
+  .navContent {
+    margin: 0px 20px;
+  }
+  #clinicContent {
+    margin-top: 24px;
+    display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    gap: 32px;
   }
-  .svc-Card .svc-card-info h1 {
-    text-align: start;
+  #clinicContent :nth-child(1) {
+    display: flex;
+    justify-content: center;
+  }
+  #clinicContent :nth-child(2) {
+    display: flex;
+  }
+  #clinicPicture {
+    width: 100%;
+    height: 250px;
+    max-width: none;
+    width: 100vw;
+  }
+  .sPicture {
+    height: auto;
+  }
+  .sPicture img {
+    user-select: none;
+    height: auto;
     width: 100%;
   }
-  .svc-Card .svc-card-info p {
-    text-align: start;
-    width: 100%;
+  #clinicInfo h1 {
+    font-size: 3.2rem;
   }
-  .svc-Card:hover {
-    transform: none;
+  #clinicInfo p {
+    font-size: 1.6rem;
+    max-width: none;
+  }
+  #sRooms {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 90vw;
+    grid-template-rows: max-content;
+    gap: 36px;
   }
   #bannerAgendar #ba-content {
     flex-direction: column;
@@ -448,37 +510,22 @@ main {
     font-size: 2rem;
   }
 }
-@media (max-width: 760px) {
-  .borders-pd {
-    padding: 40px 20px 80px;
-  }
-  #navPages {
-    display: none;
-  }
-  #btnExpMenu {
-    display: flex;
-  }
-  #expMenu {
-    display: block;
-  }
-}
 @media (max-width: 534px) {
+  .section-title {
+    font-size: 3.8rem;
+    line-height: 110%;
+  }
   .section-subtitle {
     font-size: 1.6rem;
   }
-  .svc-Card .svc-img {
-    width: 70px;
-    height: 70px;
+  .navContent {
+    margin: 0px 20px;
   }
-  .svc-Card .svc-card-info h1 {
-    font-size: 1.6rem;
-  }
-  .svc-Card .svc-card-info p {
-    font-size: 1.2rem;
-  }
-  #bannerAgendar #ba-content a h1 {
-    font-size: 1.6rem;
+}
+@media (max-width: 400px) {
+  #clinicTxt h1 {
+    font-size: 3.2rem;
   }
 }
 
-/*# sourceMappingURL=servicos.css.map */
+/*# sourceMappingURL=sobre.css.map */
