@@ -22,14 +22,14 @@ nav {
   align-items: center;
   width: 100%;
   height: 64px;
-  background-color: #FFF7F0;
+  background-color: #F6F0EF;
 }
 
 .actionBtn {
   border-radius: 200px;
-  background-image: var(--gradient);
+  background-color: #824E5A;
   font-weight: 700;
-  color: #1D1D1F;
+  color: #FBFBFD;
   transition: filter 0.5s;
 }
 .actionBtn:hover {
@@ -113,6 +113,7 @@ nav {
 }
 #navPages li #navAction {
   padding: 7px 12px;
+  color: #FBFBFD;
 }
 
 #btnExpMenu {
@@ -127,7 +128,7 @@ nav {
   top: 64px;
   transition: all 0.7s;
   overflow: hidden;
-  background-color: #FFF7F0;
+  background-color: #F6F0EF;
   border-bottom: solid 1px rgba(0, 0, 0, 0);
 }
 #expMenu #expMcontent {
@@ -205,6 +206,7 @@ main {
 }
 .svc-Card .svc-img {
   margin-top: 24px;
+  border-radius: 12px;
   width: 150px;
   height: 150px;
 }
@@ -242,7 +244,7 @@ main {
   font-weight: 600;
 }
 #bannerAgendar #ba-content #bTextC h1 {
-  color: #F57875;
+  color: #824E5A;
   font-weight: 700;
   font-size: 3.2rem;
 }

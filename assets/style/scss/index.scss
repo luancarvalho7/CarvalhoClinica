@@ -15,7 +15,6 @@
 
 :root {
     font-size: 10px;
-    --gradient: linear-gradient(180deg, #F87171 0%, #D9A689 100%);
 }
 
 body {
@@ -36,9 +35,9 @@ nav {
 // Components
 .actionBtn {
     border-radius: 200px;
-    background-image: var(--gradient);
+    background-color: var.$pink;
     font-weight: 700;
-    color: var.$txt900;
+    color: var.$w200;
     transition: filter 0.5s;
 
     &:hover {
@@ -67,9 +66,7 @@ nav {
 
 .coloredMainTxt {
     font-weight: 700;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var.$pink;
 }
 
 .secondTxt {
@@ -82,16 +79,19 @@ nav {
     color: var.$txt300;
     font-weight: 400;
 }
+
 .fourthTxt {
     color: var.$txt200;
     font-weight: 400;
 }
+
 .section-title {
     font-size: 4.8rem;
     text-align: center;
     line-height: 110%;
     margin-bottom: 6px;
 }
+
 .section-subtitle {
     font-size: 1.8rem;
     text-align: center;
@@ -132,6 +132,7 @@ nav {
         }
 
         #navAction {
+            color: var.$w200;
             padding: 7px 12px;
         }
     }
@@ -292,9 +293,9 @@ main {
 }
 
 .star {
-    width: 21px;
-    height: 21px;
-    background-image: url('../visual/svg/singleStar.svg');
+    width: 9px;
+    height: 9px;
+    background-image: url('../visual/svg/eclipse.svg');
     background-size: cover;
 }
 
@@ -304,16 +305,19 @@ main {
     flex-direction: column;
     gap: 32px;
 }
-#reviewsTitle{
+
+#reviewsTitle {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
 }
-.elfsight-app-3d5503b7-ac55-4620-a445-0f173eadb11b{
+
+.elfsight-app-3d5503b7-ac55-4620-a445-0f173eadb11b {
     height: 202px;
 }
+
 //Adress
 
 
@@ -323,12 +327,14 @@ main {
     flex-direction: column;
     gap: 32px;
 }
-#adressTitle{
+
+#adressTitle {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
+
 #mapClinica {
     width: auto;
     border-radius: 24px;
@@ -365,13 +371,15 @@ main {
     flex-direction: column;
     gap: 32px;
 }
+
 #instaTitle {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    
+
 }
+
 //FOOTER 
 
 #pgFooter {
@@ -382,43 +390,52 @@ main {
     font-size: 1.4rem;
 
 }
+
 #fContent {
     padding-top: 46px;
-    border-top: solid 1px #D2D2D7;;
+    border-top: solid 1px #D2D2D7;
+    ;
     display: flex;
     justify-content: space-between;
 }
+
 #carvalhoClinica {
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1{
+
+    h1 {
         text-align: center;
         font-weight: 400;
         font-size: 1.4rem;
         color: black;
     }
 }
+
 #fLinks {
     display: flex;
     gap: 4.5vw;
 }
-.footerLinks{
- 
-    h1{
+
+.footerLinks {
+
+    h1 {
         color: var.$txt900;
         font-size: 1.4rem;
         font-weight: 700;
     }
+
     li {
         list-style: none;
         margin: 5px 0px;
+
         a {
             color: var.$txt300;
         }
     }
-   
+
 }
+
 #byLuan {
     width: 165px;
     height: 45px;
@@ -440,12 +457,14 @@ main {
             width: 42vw;
         }
     }
+
     //Footer 
-    #fContent{
+    #fContent {
         flex-direction: column;
         align-items: center;
         row-gap: 32px;
     }
+
     #fLinks {
         display: flex;
         gap: 15.5vw;
@@ -453,11 +472,13 @@ main {
 }
 
 @media (max-width: 760px) {
-//Components 
-.borders-pd{
-    padding: 40px 20px 80px;
 
-}
+    //Components 
+    .borders-pd {
+        padding: 40px 20px 80px;
+
+    }
+
     #navPages {
         display: none;
     }
@@ -472,8 +493,9 @@ main {
 
     //nav 
     .navContent {
-       // margin: 0px 20px;
+        // margin: 0px 20px;
     }
+
     //Services
     #sGrid {
         grid-template-columns: 1fr;
@@ -492,19 +514,22 @@ main {
                 height: 300px;
             }
         }
-        
+
     }
 }
 
-@media (max-width: 534px){
+@media (max-width: 534px) {
+
     //Components
     .section-title {
         font-size: 3.8rem;
         line-height: 110%;
     }
+
     .section-subtitle {
         font-size: 1.6rem;
     }
+
     #welcomeContent {
         h1 {
             font-size: 3.8rem;
@@ -521,9 +546,10 @@ main {
     }
 
 
-    #sGrid{
+    #sGrid {
         gap: 20px;
     }
+
     #servicesPicture {
         justify-content: center;
 
@@ -536,6 +562,6 @@ main {
                 height: 200px;
             }
         }
-        
+
     }
 }

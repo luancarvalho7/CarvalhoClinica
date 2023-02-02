@@ -37,9 +37,9 @@ nav {
 // Components
 .actionBtn {
     border-radius: 200px;
-    background-image: var(--gradient);
+    background-color: var.$pink;
     font-weight: 700;
-    color: var.$txt900;
+    color: var.$w200;
     transition: filter 0.5s;
 
     &:hover {
@@ -130,6 +130,7 @@ nav {
 
         #navAction {
             padding: 7px 12px;
+            color: var.$w200;
         }
     }
 }
@@ -236,6 +237,7 @@ main {
 
     .svc-img {
         margin-top: 24px;
+        border-radius: 12px;
         width: 150px;
         height: 150px;
     }
