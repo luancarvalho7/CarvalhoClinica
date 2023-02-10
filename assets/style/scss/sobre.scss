@@ -6,6 +6,7 @@
     align-items: center;
 }
 
+/* sass --watch assets\style\scss\sobre.scss:assets\style\css\sobre.css */
 
 * {
     margin: 0px;
@@ -447,7 +448,8 @@ main {
 
 #pgFooter {
 
-
+    background-image: url(".././visual/images/background.jpg");
+    background-size: cover;
 
 
     font-size: 1.4rem;

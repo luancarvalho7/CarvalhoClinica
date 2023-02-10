@@ -1,3 +1,4 @@
+/* sass --watch assets\style\scss\servicos.scss:assets\style\css\servicos.css */
 * {
   margin: 0px;
   padding: 0px;
@@ -267,6 +268,8 @@ main {
 }
 
 #pgFooter {
+  background-image: url(".././visual/images/background.jpg");
+  background-size: cover;
   font-size: 1.4rem;
 }
 

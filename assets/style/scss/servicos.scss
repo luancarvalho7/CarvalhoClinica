@@ -6,6 +6,7 @@
     align-items: center;
 }
 
+/* sass --watch assets\style\scss\servicos.scss:assets\style\css\servicos.css */
 
 * {
     margin: 0px;
@@ -313,6 +314,11 @@ main {
 //FOOTER 
 
 #pgFooter {
+
+    background-image: url(".././visual/images/background.jpg");
+    background-size: cover;
+
+
     font-size: 1.4rem;
 
 }

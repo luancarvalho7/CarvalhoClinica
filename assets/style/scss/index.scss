@@ -1,11 +1,14 @@
 @use './var';
 
+
+
 @mixin flexCenter {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* sass --watch assets\style\scss\index.scss:assets\style\css\index.css */
 
 * {
     margin: 0px;
@@ -384,7 +387,8 @@ main {
 
 #pgFooter {
 
-
+    background-image: url(".././visual/images/background.jpg");
+    background-size: cover;
 
 
     font-size: 1.4rem;
