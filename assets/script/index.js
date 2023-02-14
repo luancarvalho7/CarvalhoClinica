@@ -12,7 +12,7 @@ function navMobileMenu() {
     else { expMenu.style.height = '0px'; expMenu.style.borderBottom = "none" }
 
 }
-const v1 = "#eapps-google-reviews-dcdb998f-8458-4878-8409-cf13321ecbaa > div > a"
+const v1 = "#eapps-google-reviews-dcdb998f-8458-4878-8409-cf13321ecbaa > div > a" 
 const v2 = "#eapps-google-reviews-3d5503b7-ac55-4620-a445-0f173eadb11b > div > a"
 
 setTimeout(() => {
@@ -24,7 +24,7 @@ setTimeout(() => {
 }, 10000);
 
 function RemWater(){
-    const x = document.querySelector(v1)
+    const x = document.querySelector(v2)
     console.log(x)
     x.style.display = "none"
 

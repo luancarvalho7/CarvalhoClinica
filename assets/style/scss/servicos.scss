@@ -170,7 +170,8 @@ nav {
             width: 65vw;
             max-width: 500px;
             padding: 16px 42px;
-            @include flexCenter()
+            @include flexCenter();
+            color: white;
         }
     }
 }

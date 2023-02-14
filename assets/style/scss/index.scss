@@ -43,6 +43,7 @@ nav {
     color: var.$w200;
     transition: filter 0.5s;
 
+
     &:hover {
         filter: brightness(116%);
     }
@@ -175,7 +176,8 @@ nav {
             width: 65vw;
             max-width: 500px;
             padding: 16px 42px;
-            @include flexCenter()
+            @include flexCenter();
+            color: white;
         }
     }
 }
