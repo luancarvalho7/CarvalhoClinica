@@ -74,6 +74,12 @@ nav {
   font-weight: 400;
 }
 
+.fourthTxt a{
+  
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.5607843137);
+}
+
 .section-title {
   font-size: 4.8rem;
   text-align: center;
