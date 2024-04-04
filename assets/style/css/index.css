@@ -300,7 +300,7 @@ main {
   padding-top: 10px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
 }
 
 #adressTitle {
@@ -309,10 +309,11 @@ main {
   align-items: center;
 }
 
-#mapClinica {
-  width: auto;
+.mapClinica {
+  width: 100%;
   border-radius: 24px;
   height: 560px;
+  margin-bottom: 32px;
 }
 
 @media (max-width: 1320px) {
